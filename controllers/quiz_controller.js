@@ -7,8 +7,8 @@ exports.index = function(req, res) {
 	models.Quiz.findAll().then(function(quizes) {
 		res.render('quizes/index.ejs', {quizes: quizes});
 	})} else {
-		//models.Quiz.findAll().then(function(quizes) {
-		models.Quiz.findAll({where: ["pregunta like?", '%' + req.query.search + '%']}).then(function(quizes){
+		
+		models.Quiz.findAll({order:["pregunta"], where:["pregunta like?", '%' + req.query.search + '%']}).then(function(quizes){
 		res.render('quizes/index.ejs', {quizes: quizes });
 	})};
 };
