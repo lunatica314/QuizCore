@@ -7,3 +7,6 @@ nav               { float: left; width: 15%; height: 80% ;}
 nav span          {margin: 0px 100px 0px 0px;}
 section           {float:right; width: 80%; height: 80%;}
 footer            {clear: both; display:block;}
+
+#ErrorMsgs            { color: #f61; font-size: smaler}
+
