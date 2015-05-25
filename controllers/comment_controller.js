@@ -17,7 +17,7 @@ exports.create = function(req, res) {
 	.then(
 		function(err){
 			if (err) {
-				res.render('comments/new.ejs', {quizid: req.params.quizId, errors: err.errors});
+				res.render('comments/new.ejs', {comment: comment, quizid: req.params.quizId, errors: err.errors});
 			} else {
 				comment // save: guarda en DB campo de texto de comment
 				.save()
