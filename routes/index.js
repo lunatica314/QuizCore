@@ -37,7 +37,7 @@ router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish',
 
 // GET página de autores
 router.get('/author', function(req, res) {
-	res.render('author', {title: 'Autores'});
+	res.render('author', {title: 'Autores', errors: []});
 });
 
 module.exports = router;
